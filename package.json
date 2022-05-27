@@ -1,6 +1,5 @@
 {
   "name": "inbox",
-
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.8",
     "ganache-cli": "^6.12.2",
     "mocha": "^10.0.0",
     "solc": "^0.4.17",
