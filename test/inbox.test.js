@@ -21,7 +21,13 @@ describe('Inbox', () => {
         assert.ok(inbox.options.address)
     });
     it('should has an initial message',  async () => {
+        console.log(inbox)
         const message = await inbox.methods.message().call()
         assert.equal(message,'Hi there')
+    });
+    it('should change the message',  async ()=> {
+        const hash = await inbox.methods.setMessage('bye').send({from:accounts[0]})
+        const message = await inbox.methods.message().call()
+        console.assert(message,'bye')
     });
 });
